@@ -1,0 +1,27 @@
+Error occured at 02-16-2020 1:15 PM
+****************************************************************** 
+ErrorMessage: Input string was not in a correct format. 
+StackTrace:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at MarksheetApi.Controllers.DashboardController.DashboardOverview(String filterYear, String filterSemester) in E:\Angular\marksheet-management\MarksheetApi\MarksheetApi\Controllers\DashboardController.cs:line 27 
+InnerException:  
+
+Error occured at 02-16-2020 1:16 PM
+****************************************************************** 
+ErrorMessage: Input string was not in a correct format. 
+StackTrace:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at MarksheetApi.Controllers.DashboardController.DashboardOverview(String filterYear, String filterSemester) in E:\Angular\marksheet-management\MarksheetApi\MarksheetApi\Controllers\DashboardController.cs:line 27 
+InnerException:  
+
+Error occured at 02-16-2020 1:17 PM
+****************************************************************** 
+ErrorMessage: Input string was not in a correct format. 
+StackTrace:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at MarksheetApi.Controllers.DashboardController.DashboardOverview(String filterYear, String filterSemester) in E:\Angular\marksheet-management\MarksheetApi\MarksheetApi\Controllers\DashboardController.cs:line 27 
+InnerException:  
+

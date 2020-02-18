@@ -1,0 +1,272 @@
+<section id="minimal-statistics-bg">
+  <div class="card">
+    <div class="card-header pb-2">
+      <h4 class="card-title">Marksheet Filters</h4>
+    </div>
+    <div class="card-content">
+      <div class="px-3">
+        <form class="form">
+          <div class="form-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="ddlYear">Filter Year</label>
+                  <select class="form-control" id="ddlYear" #ddlYear (change)="getDashboardOverView()">
+                    <option value="">All</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="ddlSemester">Filter Semester</label>
+                  <select class="form-control" id="ddlSemester" #ddlSemester (change)="getDashboardOverView()">
+                    <option value="0">All</option>
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="3">Semester 3</option>
+                    <option value="4">Semester 4</option>
+                    <option value="5">Semester 5</option>
+                    <option value="6">Semester 6</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header pb-2">
+      <h4 class="card-title">Issued Marksheets</h4>
+    </div>
+    <div class="card-content px-3">
+      <div class="row text-left" matchHeight="card">
+        <div class="col-xl-3 col-lg-6 col-12">
+          <div class="card bg-warning">
+            <div class="card-content">
+              <div class="px-3 py-3">
+                <div class="media">
+                  <div class="media-body white text-left">
+                    <h3>{{overViewData.AutomobileIssuedMarksheet}}</h3>
+                    <span>{{departmentList[0]}}</span>
+                  </div>
+                  <div class="media-right align-self-center">
+                    <i class="icon-info white font-large-2 float-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-12">
+          <div class="card bg-success">
+            <div class="card-content">
+              <div class="px-3 py-3">
+                <div class="media">
+                  <div class="media-body white text-left">
+                    <h3>{{overViewData.CivilIssuedMarksheet}}</h3>
+                    <span>{{departmentList[1]}}</span>
+                  </div>
+                  <div class="media-right align-self-center">
+                    <i class="icon-info white font-large-2 float-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-6 col-12">
+          <div class="card bg-danger">
+            <div class="card-content">
+              <div class="px-3 py-3">
+                <div class="media">
+                  <div class="media-body white text-left">
+                    <h3>{{overViewData.ComputerIssuedMarksheet}}</h3>
+                    <span>{{departmentList[2]}}</span>
+                  </div>
+                  <div class="media-right align-self-center">
+                    <i class="icon-info white font-large-2 float-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-12">
+          <div class="card bg-primary">
+            <div class="card-content">
+              <div class="px-3 py-3">
+                <div class="media">
+                  <div class="media-body white text-left">
+                    <h3>{{overViewData.ECIssuedMarksheet}}</h3>
+                    <span>{{departmentList[3]}}</span>
+                  </div>
+                  <div class="media-right align-self-center">
+                    <i class="icon-info white font-large-2 float-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-left" matchHeight="card">
+        <div class="col-xl-3 col-lg-6 col-12">
+          <div class="card bg-primary">
+            <div class="card-content">
+              <div class="px-3 py-3">
+                <div class="media">
+                  <div class="media-left align-self-center">
+                    <i class="icon-info white font-large-2 float-left"></i>
+                  </div>
+                  <div class="media-body white text-right">
+                    <h3>{{overViewData.ElectricalIssuedMarksheet}}</h3>
+                    <span>{{departmentList[4]}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-12">
+          <div class="card bg-danger">
+            <div class="card-content">
+              <div class="px-3 py-3">
+                <div class="media">
+                  <div class="media-left align-self-center">
+                    <i class="icon-info white font-large-2 float-left"></i>
+                  </div>
+                  <div class="media-body white text-right">
+                    <h3>{{overViewData.MechanicalIssuedMarksheet}}</h3>
+                    <span>{{departmentList[5]}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header pb-2">
+      <h4 class="card-title">UnIssued Marksheets</h4>
+    </div>
+    <div class="card-content px-3">
+      <div class="row text-left" matchHeight="card">
+        <div class="col-xl-3 col-lg-6 col-12">
+          <div class="card bg-warning">
+            <div class="card-content">
+              <div class="px-3 py-3">
+                <div class="media">
+                  <div class="media-body white text-left">
+                    <h3>{{overViewData.AutomobileUnIssuedMarksheet}}</h3>
+                    <span>{{departmentList[0]}}</span>
+                  </div>
+                  <div class="media-right align-self-center">
+                    <i class="icon-info white font-large-2 float-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-12">
+          <div class="card bg-success">
+            <div class="card-content">
+              <div class="px-3 py-3">
+                <div class="media">
+                  <div class="media-body white text-left">
+                    <h3>{{overViewData.CivilUnIssuedMarksheet}}</h3>
+                    <span>{{departmentList[1]}}</span>
+                  </div>
+                  <div class="media-right align-self-center">
+                    <i class="icon-info white font-large-2 float-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-6 col-12">
+          <div class="card bg-danger">
+            <div class="card-content">
+              <div class="px-3 py-3">
+                <div class="media">
+                  <div class="media-body white text-left">
+                    <h3>{{overViewData.ComputerUnIssuedMarksheet}}</h3>
+                    <span>{{departmentList[2]}}</span>
+                  </div>
+                  <div class="media-right align-self-center">
+                    <i class="icon-info white font-large-2 float-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-12">
+          <div class="card bg-primary">
+            <div class="card-content">
+              <div class="px-3 py-3">
+                <div class="media">
+                  <div class="media-body white text-left">
+                    <h3>{{overViewData.ECUnIssuedMarksheet}}</h3>
+                    <span>{{departmentList[3]}}</span>
+                  </div>
+                  <div class="media-right align-self-center">
+                    <i class="icon-info white font-large-2 float-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-left" matchHeight="card">
+        <div class="col-xl-3 col-lg-6 col-12">
+          <div class="card bg-primary">
+            <div class="card-content">
+              <div class="px-3 py-3">
+                <div class="media">
+                  <div class="media-left align-self-center">
+                    <i class="icon-info white font-large-2 float-left"></i>
+                  </div>
+                  <div class="media-body white text-right">
+                    <h3>{{overViewData.ElectricalUnIssuedMarksheet}}</h3>
+                    <span>{{departmentList[4]}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-12">
+          <div class="card bg-danger">
+            <div class="card-content">
+              <div class="px-3 py-3">
+                <div class="media">
+                  <div class="media-left align-self-center">
+                    <i class="icon-info white font-large-2 float-left"></i>
+                  </div>
+                  <div class="media-body white text-right">
+                    <h3>{{overViewData.MechanicalUnIssuedMarksheet}}</h3>
+                    <span>{{departmentList[5]}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

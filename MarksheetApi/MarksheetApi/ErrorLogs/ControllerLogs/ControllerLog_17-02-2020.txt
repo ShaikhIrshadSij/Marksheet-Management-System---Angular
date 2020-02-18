@@ -1,0 +1,12 @@
+Error occured at 02-17-2020 10:01 PM
+****************************************************************** 
+ErrorMessage: Object reference not set to an instance of an object. 
+StackTrace:    at MarksheetApi.Controllers.MarksheetController.GetMarksheetData() in E:\Angular\marksheet-management\MarksheetApi\MarksheetApi\Controllers\MarksheetController.cs:line 27 
+InnerException:  
+
+Error occured at 02-17-2020 10:01 PM
+****************************************************************** 
+ErrorMessage: Object reference not set to an instance of an object. 
+StackTrace:    at MarksheetApi.Controllers.MarksheetController.GetMarksheetData() in E:\Angular\marksheet-management\MarksheetApi\MarksheetApi\Controllers\MarksheetController.cs:line 27 
+InnerException:  
+

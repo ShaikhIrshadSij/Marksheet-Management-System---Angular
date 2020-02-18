@@ -1,0 +1,22 @@
+<section class="file-browser">
+  <div class="row text-left">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title mb-0">Marksheet Upload</h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <div class="custom-file  mx-auto d-block">
+              <input type="file" class="custom-file-input" (change)="onUpload($event)">
+              <label class="custom-file-label">Choose file</label>
+            </div>
+            <button type="button" class="btn btn-raised btn-primary" (click)="uploadFile()" style="margin-top: 10px;">
+              <i class="fa fa-check-square-o"></i> Upload Marksheet
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
