@@ -12,6 +12,53 @@
         [footerHeight]="50" [rowHeight]="'auto'" [externalPaging]="true" [externalSorting]="true" [count]="page.count"
         [offset]="page.offset" [limit]="page.limit" [sortType]="'single'" (page)="pageCallback($event)"
         (sort)="sortCallback($event)">
+        <ngx-datatable-column name="EnrollementNo">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="StatementNo">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Year">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Month">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Semester">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="ApprovedTime">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{ formatDate(value) }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="DisapprovedTime">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{ formatDate(value) }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="IsApproved">
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            <div *ngIf="value == false"><i class="ft-x"></i></div>
+            <div *ngIf="value == true"><i class="ft-check"></i></div>
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="MarksheetId">
+          <ng-template let-column="column" ngx-datatable-header-template>Actions</ng-template>
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{ value }}
+          </ng-template>
+        </ngx-datatable-column>
       </ngx-datatable>
     </div>
   </div>

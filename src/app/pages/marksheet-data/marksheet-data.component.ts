@@ -68,4 +68,8 @@ export class MarksheetDataComponent implements OnInit {
       this.rows = data.rows;
     });
   }
+
+  formatDate(date){
+    return "Not Available";
+  }
 }
