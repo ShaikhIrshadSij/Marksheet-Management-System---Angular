@@ -31,7 +31,7 @@
     "ngx-perfect-scrollbar": "7.2.1",
     "ngx-toastr": "10.0.4",
     "ngx-ui-switch": "8.0.1",
-    "prismjs": "1.16.0",
+    "prismjs": "1.23.0",
     "rxjs": "~6.3.3",
     "screenfull": "4.2.0",
     "sweetalert2": "8.11.6",
